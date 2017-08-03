@@ -1,0 +1,6 @@
+name: Switchtheme
+description: 'Allows switching the theme in various means.'
+core: 8.x
+configure: switchtheme.settings_form
+package: User interface
+type: module

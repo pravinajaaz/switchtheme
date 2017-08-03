@@ -1,0 +1,10 @@
+services:
+  theme.negotiator.switchtheme:
+    class: Drupal\switchtheme\Theme\SwitchthemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 0 }
+  init_subscriber:
+      class: Drupal\switchtheme\EventSubscriber\InitSubscriber
+      tags:
+        -
+          name: event_subscriber

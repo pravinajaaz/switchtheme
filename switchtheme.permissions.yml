@@ -1,0 +1,6 @@
+administer switch:
+  title: 'Administer SwitchTheme'
+switch theme:
+  title: 'Switch themes'
+select different theme:
+  title: 'Permanently use a custom theme'

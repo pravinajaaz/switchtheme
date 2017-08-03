@@ -1,0 +1,5 @@
+switchtheme.settings_form:
+  route_name: switchtheme.settings_form
+  title: 'Switchtheme settings'
+  description: 'Configure theme selection settings.'
+  parent: system.admin_config_ui

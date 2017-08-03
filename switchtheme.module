@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Adds a block with a user theme switcher.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function switchtheme_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.switchtheme':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Switchtheme module provides <a href="@blocks-url">blocks</a> to allow users to switch themes on the fly. You can define custom labels to display for each enabled theme. It also allows the theme to be changed based on the visitor browser (requires <a href="@browscap-url">Browscap</a> module).', array(
+        '@blocks-url' => Url::fromRoute('block.admin_display'),
+        '@browscap-url' => 'http://drupal.org/project/browscap',
+      )) . '</p>';
+      return $output;
+
+    case 'switchtheme.settings_form':
+      return t('Set a label for each enabled theme. This is what will be displayed to the user in the selection box.');
+  }
+}

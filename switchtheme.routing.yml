@@ -1,0 +1,8 @@
+switchtheme.settings_form:
+  path: /admin/config/user-interface/switchtheme
+  defaults:
+    _form: \Drupal\switchtheme\Form\SwitchthemeAdminSettings
+    _title: 'Switchtheme'
+    _description: 'Configure theme selection settings.'
+  requirements:
+    _permission: 'administer switch'
